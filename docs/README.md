@@ -12,3 +12,9 @@
 ## Assumptions
 - Mock WebSocket server for real-time data.
 - Sample CSV for trading strategy.
+## API Setup
+- Start PostgreSQL and Redis.
+- Run API: `uvicorn api.main:app --reload`
+- Test endpoints:
+  - POST `/trades`: `curl -X POST http://localhost:8000/trades -d '{"ticker":"AAPL","price":150.0,"quantity":10,"side":"buy"}'`
+  - GET `/trades`: `curl http://localhost:8000/trades?ticker=AAPL`
