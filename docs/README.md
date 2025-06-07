@@ -18,3 +18,8 @@
 - Test endpoints:
   - POST `/trades`: `curl -X POST http://localhost:8000/trades -d '{"ticker":"AAPL","price":150.0,"quantity":10,"side":"buy"}'`
   - GET `/trades`: `curl http://localhost:8000/trades?ticker=AAPL`
+## WebSocket Setup
+- Start server: `python websocket/server.py`
+- Start client: `python websocket/client.py`
+- Alerts printed for >2% price changes.
+- Average prices calculated every 5 minutes via Celery.

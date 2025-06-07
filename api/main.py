@@ -7,6 +7,7 @@ from datetime import datetime
 from sqlalchemy.sql import func
 from api.celery_config import send_notification
 
+
 app = FastAPI()
 DATABASE_URL = "postgresql://abhijeet:abhijeet111@localhost/trading_system"
 engine = create_engine(DATABASE_URL)
